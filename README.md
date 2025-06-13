@@ -43,8 +43,8 @@
 
 1. 克隆專案：
 ```bash
-git clone <repository_url>
-cd <project_directory>
+git clone https://github.com/godmakereth/Tai-telegram-activity-bot.git
+cd Tai-telegram-activity-bot
 ```
 
 2. 安裝依賴套件：
@@ -53,31 +53,42 @@ pip install -r requirements.txt
 ```
 
 3. 設置環境變數：
-   - 複製 `.env.example` 檔案為 `.env`
-   - 在 `.env` 檔案中設置您的 Telegram Bot Token：
+   - 複製 `.env.example` 為 `.env`
+   - 在 `.env` 中設置您的 Telegram Bot Token
+   ```bash
+   cp .env.example .env
+   ```
+   - 編輯 `.env` 文件，填入您的 Bot Token：
    ```
    TELEGRAM_TOKEN=your_bot_token_here
    ```
 
-## 使用說明
-
-1. 啟動機器人：
+4. 運行機器人：
 ```bash
 python src/main.py
 ```
 
-2. 在 Telegram 中使用以下命令：
-   - `/start` - 開始活動
-     - 會顯示活動選單
-     - 選擇要開始的活動類型
-   
-   - `/stop` - 停止活動
-     - 結束當前進行的活動
-     - 顯示活動統計資訊
-   
-   - `/statistics` - 查看統計資料
-     - 顯示時間範圍選單
-     - 可選擇查看不同時期的統計資料
+## Mac 與 Windows 安裝差異
+
+| 步驟         | Mac 指令/方式                        | Windows 指令/方式                  |
+|--------------|--------------------------------------|------------------------------------|
+| 複製檔案     | cp .env.example .env                 | copy .env.example .env             |
+| 編輯檔案     | nano .env / vim .env / open -e .env  | notepad .env                       |
+| 安裝 Python  | 建議用 Homebrew 安裝最新版           | 從 python.org 下載安裝             |
+| 終端機/命令  | Terminal (預設 bash/zsh)             | 命令提示字元(cmd) 或 PowerShell    |
+| pip 指令     | pip 或 pip3                          | pip 或 pip3                        |
+
+**注意事項：**
+- Windows 若遇權限問題，請用「以系統管理員身分執行」命令提示字元。
+- 其餘安裝與啟動步驟皆相同。
+
+## 使用說明
+
+1. 在 Telegram 中將機器人加入群組
+2. 使用以下命令：
+   - `/start` - 開始追蹤活動
+   - `/stop` - 停止追蹤活動
+   - `/statistics` - 查看活動統計
 
 ## 專案結構
 
@@ -164,7 +175,7 @@ python src/main.py
 
 ## 授權
 
-MIT License
+本專案使用 MIT 授權條款。詳見 [LICENSE](LICENSE) 文件。
 
 ## 聯絡方式
 

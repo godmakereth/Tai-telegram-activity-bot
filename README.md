@@ -173,10 +173,6 @@ python src/main.py
 3. Q: 如何添加新的活動類型？
    A: 在 src/utils/config.py 中添加新的活動設定
 
-## 授權
-
-本專案使用 MIT 授權條款。詳見 [LICENSE](LICENSE) 文件。
-
 ## 聯絡方式
 
 如有問題或建議，請提交 Issue 或 Pull Request。 
